@@ -46,7 +46,7 @@ async def read_items(user_name: str, key: str, groupid: int, rankid: int):
      usernameinsystem = await client.get_user_by_username(user_name)
      user_id = usernameinsystem.id
      membertorank =  await group.get_member_by_id(user_id)
-     await membertorank.change_rank(rankid)
+     await membertorank.set_role(rankid)
      return ("The user had their ranked changed")
     else:
         return "Incorrect key"
