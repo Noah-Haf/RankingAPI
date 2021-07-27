@@ -40,7 +40,7 @@ async def read_items(user_name: str, key: str, groupid: int):
         return "Incorrect key"
 
 @app.get("/group/rank/")
-async def read_items(user_name: str, key: str, groupid: int, rankid: int):
+async def read_items(user_name: str, key: str, groupid: int, role_number: int):
     if key == APIKEY:
      group = await client.get_group(groupid)
      usernameinsystem = await client.get_user_by_username(user_name)
