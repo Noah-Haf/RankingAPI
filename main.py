@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 import asyncio
 load_dotenv()
 
-RobloxCookie = os.getenv("")
-APIKEY = os.getenv("")
+RobloxCookie = os.getenv("COOKIE")
+APIKEY = os.getenv("API_KEY")
 
 
 client = Client(RobloxCookie)
