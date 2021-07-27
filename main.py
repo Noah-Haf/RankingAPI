@@ -43,10 +43,9 @@ async def read_items(user_name: str, key: str, groupid: int):
 async def read_items(user_name: str, key: str, groupid: int, role_number: int):
     if key == APIKEY:
      group = await client.get_group(groupid)
-     usernameinsystem = await client.get_user_by_username(user_name)
-     user_id = usernameinsystem.id
      membertorank =  await group.get_member_by_id(user_id)
-     await membertorank.set_role(rankid)
+     target = await client.group.get_member_by_username(args[1])
+     await target.setrank(role_number)
      return ("The user had their ranked changed")
     else:
         return "Incorrect key"
