@@ -1,0 +1,4 @@
+fastapi==0.63.0
+ro_py==1.2.0.5  
+asyncio==3.4.3
+python-dotenv==0.16.0
