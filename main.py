@@ -48,4 +48,11 @@ async def read_items(user_name: str, key: str, groupid: int, role_number: int):
      return ("The user had their ranked changed")
     else:
         return "Incorrect key"
-    
+
+@app.get("/group/members/")
+async def read_items(key: str, groupid: int):
+    if key == APIKEY:
+     group = await client.get_group(groupid)
+     return (group.member_count)
+    else:
+        return "Incorrect key"
