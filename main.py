@@ -57,10 +57,3 @@ async def read_items(key: str, groupid: int):
     else:
         return "Incorrect key"
 
-@app.get("/group/shout/")
-async def read_items(key: str, groupid: int):
-    if key == APIKEY:
-     group = await client.get_group(groupid)
-     return (group.shout)
-    else:
-        return "Incorrect key"
